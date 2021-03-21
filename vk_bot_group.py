@@ -272,7 +272,7 @@ class Group_bot():
     # Регистрация пользователь, одновременно польлзующихся ботом
     def __check_usr(self, event):
         if not event.user_id in self.users_list:
-            self.msg('Бот начал работу', event.user_id, open('app/Keyboards/Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
+            self.msg('Бот начал работу', event.user_id, open('/app/Keyboards/Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
             self.users_list[event.user_id] = [True, False, False, False, False, False, False, False, False], '', []
         else:
             self.setting_setup(event.user_id)
