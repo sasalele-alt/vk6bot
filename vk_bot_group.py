@@ -280,6 +280,7 @@ class Group_bot():
             previous = self.users_list[event.user_id][-2]
 
             if event.text.capitalize() == 'Расписание' and self.hw_start == True:
+                print('1')
                 page = requests.get('http://p11505.edu35.ru/gmraspisanie/izmeneniya')
                 print(page.status_code)
                 self.__timetable(event)
