@@ -44,32 +44,32 @@ class Group_bot():
     # Список домашнего задания
     # 1 часть
     def __hw_list(self, event):
-        self.msg('Выберите один из предложенных пунктов.', event.user_id, open('Keyboards\Key_HW_Choice.json', 'r', encoding='UTF-8').read())
+        self.msg('Выберите один из предложенных пунктов.', event.user_id, open(os.getcwd() + 'Keyboards\Key_HW_Choice.json', 'r', encoding='UTF-8').read())
 
     # 2 часть
     def __hw_list_today(self, event):
         if status():
-            self.msg(homework_compleater(), event.user_id, open('Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
+            self.msg(homework_compleater(), event.user_id, open(os.getcwd() + 'Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
         else:
-            self.msg('Возникли проблемы с получением расписания, из-за этого не получается получить информацию по дз на завтра.\nПопробуйте позже.', event.user_id, open('Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
+            self.msg('Возникли проблемы с получением расписания, из-за этого не получается получить информацию по дз на завтра.\nПопробуйте позже.', event.user_id, open(os.getcwd() + 'Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
 
     # 3 часть
     def __hw_list_all(self, event):
         if status():
-            self.msg(all_hw(), event.user_id, open('Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
+            self.msg(all_hw(), event.user_id, open(os.getcwd() + 'Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
         else:
-            self.msg('Возникли проблемы с получением расписания, из-за этого не получается получить информацию по дз на завтра.\nПопробуйте позже.', event.user_id, open('Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
+            self.msg('Возникли проблемы с получением расписания, из-за этого не получается получить информацию по дз на завтра.\nПопробуйте позже.', event.user_id, open(os.getcwd() + 'Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
 
     # ----------------------------------------------------------------------------------------------------------------------------
     # Изменение домашнего задания
     def __hw_change(self, event):
-        self.msg('Часть 1', event.user_id, open('Keyboards\Key_Subject_List_1.json', 'r', encoding='UTF-8').read())
-        self.msg('Часть 2', event.user_id, open('Keyboards\Key_Subject_List_2.json', 'r', encoding='UTF-8').read())
-        self.msg('Часть 3', event.user_id, open('Keyboards\Key_Subject_List_3.json', 'r', encoding='UTF-8').read())
+        self.msg('Часть 1', event.user_id, open(os.getcwd() + 'Keyboards\Key_Subject_List_1.json', 'r', encoding='UTF-8').read())
+        self.msg('Часть 2', event.user_id, open(os.getcwd() + 'Keyboards\Key_Subject_List_2.json', 'r', encoding='UTF-8').read())
+        self.msg('Часть 3', event.user_id, open(os.getcwd() + 'Keyboards\Key_Subject_List_3.json', 'r', encoding='UTF-8').read())
         if self.pub_2_a == True:
-            self.msg('Выберите нужный предмет.', event.user_id, open('Keyboards\Key_Move_vr2.json', 'r', encoding='UTF-8').read())
+            self.msg('Выберите нужный предмет.', event.user_id, open(os.getcwd() + 'Keyboards\Key_Move_vr2.json', 'r', encoding='UTF-8').read())
         else:
-            self.msg('Выберите нужный предмет.', event.user_id, open('Keyboards\Key_Move.json', 'r', encoding='UTF-8').read())
+            self.msg('Выберите нужный предмет.', event.user_id, open(os.getcwd() + 'Keyboards\Key_Move.json', 'r', encoding='UTF-8').read())
 
     # Ввод дз
     def __hw_ent(self, event, previous):
@@ -150,11 +150,11 @@ class Group_bot():
             w.close()
 
         os.chdir(b)
-        self.msg('Загрузка почти закончилась.', event.user_id, open('Keyboards\Key_Move.json', 'r', encoding='UTF-8').read())
+        self.msg('Загрузка почти закончилась.', event.user_id, open(os.getcwd() + 'Keyboards\Key_Move.json', 'r', encoding='UTF-8').read())
         #except:
             #self.msg('Произошла ошибка. Фото не сохранилось.', event.user_id, open('Keyboards\Key_Move.json', 'r', encoding='UTF-8').read())
         #finally:
-        self.msg('Загрузка прошла успешно', event.user_id, open('Keyboards\Key_Move.json', 'r', encoding='UTF-8').read())
+        self.msg('Загрузка прошла успешно', event.user_id, open(os.getcwd() + 'Keyboards\Key_Move.json', 'r', encoding='UTF-8').read())
         
     # ----------------------------------------------------------------------------------------------------------------------------
     # Авторизация
@@ -207,7 +207,7 @@ class Group_bot():
             self.__auth()
             self.post_id = self.__post(text_converter() + homework_compleater())
             self.__photo_post(les(lessons()))
-            self.msg('Публикация дз закончена.', event.user_id, open('Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
+            self.msg('Публикация дз закончена.', event.user_id, open(os.getcwd() + 'Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
             
     # ----------------------------------------------------------------------------------------------------------------------------
     # Расписание
@@ -272,7 +272,7 @@ class Group_bot():
     # Регистрация пользователь, одновременно польлзующихся ботом
     def __check_usr(self, event):
         if not event.user_id in self.users_list:
-            self.msg('Бот начал работу', event.user_id, open('Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
+            self.msg('Бот начал работу', event.user_id, open(os.getcwd() + 'Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
             self.users_list[event.user_id] = [True, False, False, False, False, False, False, False, False], '', []
         else:
             self.setting_setup(event.user_id)
@@ -308,14 +308,14 @@ class Group_bot():
             elif (event.text.capitalize() in sub) and self.hw_chwrite == True:
                 self.choice = True
                 self.subj = event.text
-                self.msg('Вот что было задано по этому предмету:\n\n' + one_hw(event.text.capitalize()), event.user_id, open('Keyboards\Key_Empty.json', 'r', encoding='UTF-8').read())
+                self.msg('Вот что было задано по этому предмету:\n\n' + one_hw(event.text.capitalize()), event.user_id, open(os.getcwd() + 'Keyboards\Key_Empty.json', 'r', encoding='UTF-8').read())
                 self.photo_send(event.text.capitalize(), event)
-                self.msg('Вы хотите произвести изменения?', event.user_id, open('Keyboards\Key_Choice.json', 'r', encoding='UTF-8').read())
+                self.msg('Вы хотите произвести изменения?', event.user_id, open(os.getcwd() + 'Keyboards\Key_Choice.json', 'r', encoding='UTF-8').read())
 
             elif event.text.capitalize() == 'Да' and self.choice == True:
                 self.hw_enter = True
                 self.choice = False
-                self.msg('Введите текст домашнего задания.', event.user_id, open('Keyboards\Key_HW_Enter.json', 'r', encoding='UTF-8').read())
+                self.msg('Введите текст домашнего задания.', event.user_id, open(os.getcwd() + 'Keyboards\Key_HW_Enter.json', 'r', encoding='UTF-8').read())
 
             elif event.text.capitalize() == 'Нет' and self.choice == True:
                 self.choice = False
@@ -323,12 +323,12 @@ class Group_bot():
                  
             elif event.text.capitalize() == 'Назад' and self.hw_start == False:
                 self.default_setting()
-                self.msg('Вы вышли из меню редактирования домашнего задания.', event.user_id, open('Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
+                self.msg('Вы вышли из меню редактирования домашнего задания.', event.user_id, open(os.getcwd() + 'Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
 
             elif event.text.capitalize() == 'Публикация' and self.hw_start == True:
                 self.pub_1 = True
                 self.hw_start = False
-                self.msg('Выберите нужный пункт меню.', event.user_id, open('Keyboards\Key_Pub_Choice.json', 'r', encoding='UTF-8').read())
+                self.msg('Выберите нужный пункт меню.', event.user_id, open(os.getcwd() + 'Keyboards\Key_Pub_Choice.json', 'r', encoding='UTF-8').read())
 
             elif event.text.capitalize() == 'Автоматическая публикация' and self.pub_1 == True:
                 self.publish(event)
@@ -337,7 +337,7 @@ class Group_bot():
             elif event.text.capitalize() == 'Ручная публикация' and self.pub_1 == True:
                 self.date = True
                 self.pub_1 = False
-                self.msg('Введите дату.', event.user_id, open('Keyboards\Key_Empty.json', 'r', encoding='UTF-8').read())
+                self.msg('Введите дату.', event.user_id, open(os.getcwd() + 'Keyboards\Key_Empty.json', 'r', encoding='UTF-8').read())
 
             elif self.date == True:
                 self.date = False
@@ -348,13 +348,13 @@ class Group_bot():
             elif self.pub_2_a == True and event.text.capitalize() == 'Завершить' and self.hw:
                 self.publish_hand(event)
                 self.default_setting()
-                self.msg('Публикация дз закончена.', event.user_id, open('Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
+                self.msg('Публикация дз закончена.', event.user_id, open(os.getcwd() + 'Keyboards\Key_Admin_Menu.json', 'r', encoding='UTF-8').read())
 
             elif self.pub_2_a == True:
                 self.hw.append(event.text)
                 self.pub_2_a = False
                 self.pub_2_d = True
-                self.msg('Выберите количество уроков по этому предмету.', event.user_id, open('Keyboards\Key_Count_Lessons.json', 'r', encoding='UTF-8').read())    
+                self.msg('Выберите количество уроков по этому предмету.', event.user_id, open(os.getcwd() + 'Keyboards\Key_Count_Lessons.json', 'r', encoding='UTF-8').read())    
 
             elif self.pub_2_d == True:
                 if event.text.isdigit():
@@ -363,7 +363,7 @@ class Group_bot():
                     self.pub_2_d = False
                     self.__hw_change(event)
                 else:
-                    self.msg('Некоректное значение.', event.user_id, open('Keyboards\Key_Count_Lessons.json', 'r', encoding='UTF-8').read())
+                    self.msg('Некоректное значение.', event.user_id, open(os.getcwd() + 'Keyboards\Key_Count_Lessons.json', 'r', encoding='UTF-8').read())
                 
             elif (self.subj in sub) and self.hw_enter == True:
                 self.__hw_ent(event, self.subj)
