@@ -1,0 +1,44 @@
+{
+  "inline": true,
+  "buttons": [
+    [{
+      "action": {
+        "type": "text",
+        "label": "Русский язык"
+      },
+      "color": "secondary"
+    }],
+	
+      [{
+        "action": {
+          "type": "text",
+          "label": "Литература"
+        },
+        "color": "secondary"
+      }],
+	  
+	    [{
+		  "action": {
+            "type": "text",
+            "label": "Немецкий язык"
+          },
+          "color": "secondary"
+		}],
+		
+		  [{
+		    "action": {
+              "type": "text",
+              "label": "Английский язык"
+            },
+            "color": "secondary"
+		  }],
+		  
+		    [{
+		      "action": {
+                "type": "text",
+                "label": "Физическая культура"
+              },
+              "color": "secondary"
+		    }]
+	  ]
+}

@@ -1,0 +1,29 @@
+{
+  "inline": true,
+  "buttons": [
+    [{
+      "action": {
+        "type": "text",
+        "label": "Физика"
+      },
+      "color": "secondary"
+    }],
+	
+      [{
+        "action": {
+          "type": "text",
+          "label": "Обществознание"
+        },
+        "color": "secondary"
+      }],
+	  
+	    [{
+		  "action": {
+			"type": "text",
+			"label": "История"
+		  },
+		  "color": "secondary"
+		}]
+	  
+	]
+}

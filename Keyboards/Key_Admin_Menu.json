@@ -1,0 +1,35 @@
+{
+  "one_time": false,
+  "inline": false,
+  "buttons": [
+    [{
+      "action": {
+        "type": "text",
+        "label": "Расписание"
+      },
+      "color": "secondary"
+    },
+      {
+        "action": {
+          "type": "text",
+          "label": "Домашнее задание"
+        },
+        "color": "secondary"
+      }],
+    [{
+      "action": {
+        "type": "text",
+        "label": "Изменение домашнего задания"
+      },
+      "color": "secondary"
+    }],
+	
+	[{
+      "action": {
+        "type": "text",
+        "label": "Публикация"
+      },
+      "color": "secondary"
+    }]
+  ]
+}

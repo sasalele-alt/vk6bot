@@ -1,0 +1,20 @@
+{
+  "one_time": false,
+  "inline": false,
+  "buttons": [
+    [{
+      "action": {
+        "type": "text",
+        "label": "Дз на учебный день"
+      },
+      "color": "secondary"
+    },
+      {
+	    "action": {
+          "type": "text",
+          "label": "Полный список дз"
+        },
+        "color": "secondary"
+      }]
+  ]
+}

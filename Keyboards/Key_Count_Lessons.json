@@ -1,0 +1,44 @@
+{
+  "inline": false,
+  "buttons": [
+    [{
+      "action": {
+        "type": "text",
+        "label": "1"
+      },
+      "color": "secondary"
+    },
+
+      {
+        "action": {
+          "type": "text",
+          "label": "2"
+        },
+        "color": "secondary"
+      }],
+	  
+	    [{
+		  "action": {
+            "type": "text",
+            "label": "3"
+          },
+          "color": "secondary"
+		},
+		
+		  {
+		    "action": {
+              "type": "text",
+              "label": "4"
+            },
+            "color": "secondary"
+		  }],
+		  
+		    [{
+		      "action": {
+                "type": "text",
+                "label": "5"
+              },
+              "color": "secondary"
+		    }]
+	  ]
+}

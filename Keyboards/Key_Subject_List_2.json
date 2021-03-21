@@ -1,0 +1,44 @@
+{
+  "inline": true,
+  "buttons": [
+    [{
+      "action": {
+        "type": "text",
+        "label": "Обж"
+      },
+      "color": "secondary"
+    }],
+	
+      [{
+        "action": {
+          "type": "text",
+          "label": "Астрономия"
+        },
+        "color": "secondary"
+      }],
+	  
+	    [{
+		  "action": {
+            "type": "text",
+            "label": "Химия"
+          },
+          "color": "secondary"
+		}],
+		
+		  [{
+		    "action": {
+              "type": "text",
+              "label": "Математика"
+            },
+            "color": "secondary"
+		  }],
+		  
+		    [{
+		      "action": {
+                "type": "text",
+                "label": "Информатика"
+              },
+              "color": "secondary"
+		    }]
+	  ]
+}

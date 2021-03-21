@@ -1,0 +1,20 @@
+{
+  "one_time": false,
+  "inline": false,
+  "buttons": [
+    [{
+      "action": {
+        "type": "text",
+        "label": "Ничего не задано"
+      },
+      "color": "positive"
+    },
+      {
+	    "action": {
+          "type": "text",
+          "label": "Назад"
+        },
+        "color": "negative"
+      }]
+  ]
+}

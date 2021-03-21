@@ -1,0 +1,20 @@
+{
+  "one_time": false,
+  "inline": false,
+  "buttons": [
+    [{
+      "action": {
+        "type": "text",
+        "label": "Автоматическая публикация"
+      },
+      "color": "secondary"
+    }],
+      [{
+	    "action": {
+          "type": "text",
+          "label": "Ручная публикация"
+        },
+        "color": "secondary"
+      }]
+  ]
+}
