@@ -1,6 +1,5 @@
 requests
 bs4
-homework_lesson.py
-vk_api.py
+vk_api
 os
 shelve
