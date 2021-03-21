@@ -1,5 +1,3 @@
 requests
 bs4
 vk_api
-os
-shelve
