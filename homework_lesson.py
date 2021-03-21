@@ -7,7 +7,7 @@ import os
 
 
 def status():
-    page = requests.get('http://p11505.edu35.ru/gmraspisanie/izmeneniya')
+    page = requests.get('http://p11505.edu35.ru/gmraspisanie/izmeneniya', timeout = 5)
     print(page.status_code)
     if page.status_code != 200:
         return
