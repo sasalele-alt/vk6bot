@@ -67,9 +67,9 @@ class Group_bot():
         self.msg('Часть 2', event.user_id, open('/app/Keyboards/Key_Subject_List_2.json', 'r', encoding='UTF-8').read())
         self.msg('Часть 3', event.user_id, open('/app/Keyboards/Key_Subject_List_3.json', 'r', encoding='UTF-8').read())
         if self.pub_2_a == True:
-            self.msg('Выберите нужный предмет.', event.user_id, open(os.getcwd() + 'Keyboards\Key_Move_vr2.json', 'r', encoding='UTF-8').read())
+            self.msg('Выберите нужный предмет.', event.user_id, open('/app/Keyboards/Key_Move_vr2.json', 'r', encoding='UTF-8').read())
         else:
-            self.msg('Выберите нужный предмет.', event.user_id, open(os.getcwd() + 'Keyboards\Key_Move.json', 'r', encoding='UTF-8').read())
+            self.msg('Выберите нужный предмет.', event.user_id, open('/app/Keyboards/ey_Move.json', 'r', encoding='UTF-8').read())
 
     # Ввод дз
     def __hw_ent(self, event, previous):
