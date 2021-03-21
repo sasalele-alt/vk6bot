@@ -159,7 +159,8 @@ class Group_bot():
     # ----------------------------------------------------------------------------------------------------------------------------
     # Авторизация
     def __auth(self):
-        self.vk = vk_api.VkApi(token = '389a203f6dbba52e2e0fe4f28d8a283c97169ba0fa138848abd23722ff628984ae0780613c9ed4260fa16')
+        toka = os.environ.get('BOT_TOKEN_USER')
+        self.vk = vk_api.VkApi(token = toka)
         self.ses = self.vk.get_api()
         self.upload = VkUpload(self.vk)
 
@@ -388,7 +389,8 @@ sub = ('Русский язык', 'Литература', 'Иностранны�
        'История', 'Физическая культура', 'Обж', 'Астрономия',
        'Химия', 'Математика', 'Информатика', 'Физика', 'Обществознание')
 
-session = vk_api.VkApi(token='178314e04810da6851aad5ce17cca518835d5f1f5b330ef42fa0f7179a44f8a4c2d5d224fd95777b0ae1e')
+tok = os.environ.get('BOT_TOKEN_GROUP')
+session = vk_api.VkApi(token=tok)
 longpoll = VkLongPoll(session)
 upload = VkUpload(session)
 
