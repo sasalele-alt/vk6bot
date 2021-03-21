@@ -289,7 +289,6 @@ class Group_bot():
                 p = requests.get('http://p11505.edu35.ru/gmraspisanie/izmeneniya', timeout = 5, headers = header, proxies = {'http': '212.68.227.166'})
                 if p.status_code == '200':
                     print('success')
-                    break
                         
                 print(r.status_code)
                 self.__timetable(event)
