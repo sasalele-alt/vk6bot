@@ -281,8 +281,14 @@ class Group_bot():
 
             if event.text.capitalize() == 'Расписание' and self.hw_start == True:
                 print('1')
-                page = requests.get('http://p11505.edu35.ru/gmraspisanie/izmeneniya')
-                print(page.status_code)
+                http_proxy  = "http://10.10.1.10:3128"
+                https_proxy = "https://10.10.1.11:1080"
+                ftp_proxy   = "ftp://10.10.1.10:3128"
+                headers = 'User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36 OPR/74.0.3911.218 (Edition Yx 08)'
+                proxyDict = {'http'  : http_proxy, 'https' : https_proxy, 'ftp'   : ftp_proxy}
+
+                r = requests.get('http://p11505.edu35.ru/gmraspisanie/izmeneniya', headers=headers, proxies=proxyDict)
+                print(r.status_code)
                 self.__timetable(event)
                 self.default_setting()
                 
