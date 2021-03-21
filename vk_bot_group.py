@@ -286,15 +286,10 @@ class Group_bot():
 'upgrade-insecure-requests': '1', 
 'cookie': 'mos_id=CllGxlx+PS20pAxcIuDnAgA=; session-cookie=158b36ec3ea4f5484054ad1fd21407333c874ef0fa4f0c8e34387efd5464a1e9500e2277b0367d71a273e5b46fa0869a; NSC_WBS-QUBG-jo-nptsv-WT-443=ffffffff0951e23245525d5f4f58455e445a4a423660; rheftjdd=rheftjddVal; _ym_uid=1552395093355938562; _ym_d=1552395093; _ym_isad=2' 
 }
-                while True:
-                    try:
-                        p = requests.get('http://p11505.edu35.ru/gmraspisanie/izmeneniya', timeout = 5, headers = header)
-                        if p.status_code == '200':
-                            print('success')
-                            break
-                    except:
-                        print('error')
-                        continue
+                p = requests.get('http://p11505.edu35.ru/gmraspisanie/izmeneniya', timeout = 5, headers = header, proxies = {'http': '212.68.227.166'})
+                if p.status_code == '200':
+                    print('success')
+                    break
                         
                 print(r.status_code)
                 self.__timetable(event)
