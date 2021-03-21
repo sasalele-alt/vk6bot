@@ -290,7 +290,7 @@ class Group_bot():
                 if p.status_code == '200':
                     print('success')
                         
-                print(r.status_code)
+                print(p.status_code)
                 self.__timetable(event)
                 self.default_setting()
                 
