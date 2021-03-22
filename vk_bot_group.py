@@ -291,7 +291,7 @@ class Group_bot():
                     print('success')
                         
                 print(p.status_code)
-                print(p)
+                print(str(p), 'Вот код')
                 self.__timetable(event)
                 self.default_setting()
                 
